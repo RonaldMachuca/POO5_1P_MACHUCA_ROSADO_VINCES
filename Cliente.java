@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 package com.example.POO4_1P_MACHUCA_ROSADO_VINCES;
 import java.util.Scanner;
 import java.time.LocalDate;
@@ -239,6 +240,31 @@ public class Cliente extends Usuario {
     public String getDireccion(){
         return direccion;
     }
+=======
+package com.example;
+
+public class Cliente {
+    private String celular;
+    private String direccion;
+
+    public Cliente(String celular, String direccion){
+        this.celular = celular;
+        this.direccion = direccion;
+    }
+
+    public String getCelular(){
+        return celular;
+    }
+
+    public String getDireccion(){
+        return direccion;
+    }
+
+    public void setCelular(String celular){
+        this.celular=celular;
+    }
+
+>>>>>>> 12f99d1092efeaea966cf8335599be8d120a1617
     public void setDireccion(String direccion){
         this.direccion=direccion;
     }
