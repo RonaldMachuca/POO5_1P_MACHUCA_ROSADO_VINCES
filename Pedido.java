@@ -4,24 +4,22 @@
 
 package com.mycompany.git;
 import java.util.Date;
-/**
- *
- * @author user
- */
 public class Pedido {
     private String codigoPedido;
     private Date fecha;
+    private String codigoProducto;
     private int cantidad;
     private double valorPagado;
     private EstadoProducto estado;
-    public static int idIncremental = 0;
-    public Pedido(String codigoPedido, Date fecha, int cantidad, double valorPagado, EstadoProducto estado) {
-        this.codigoPedido = codigoPedido;
+    private String codigoRepartidor;
+    public static int idIncremental = 1000;
+    public Pedido(String codigoPedido, Date fecha,String codigoProducto ,int cantidad, double valorPagado, EstadoProducto estado) {
+        this.codigoPedido = generarCodigoPedido();
         this.fecha = fecha;
+        this.codigoProducto= codigoProducto;
         this.cantidad = cantidad;
         this.valorPagado = valorPagado;
         this.estado = estado;
-        idIncremental++;
     }
     public String getCodigoPedido() {
         return codigoPedido;
@@ -38,9 +36,6 @@ public class Pedido {
     public EstadoProducto getEstado() {
         return estado;
     }
-    public static int getIdIncremental() {
-        return idIncremental;
-    }
     public void setCodigoPedido(String codigoPedido) {
         this.codigoPedido = codigoPedido;
     }
@@ -55,5 +50,35 @@ public class Pedido {
     }
     public void setEstado(EstadoProducto estado) {
         this.estado = estado;
-    } 
+    }
+    public String getCodigoProducto() {
+        return codigoProducto;
+    }
+
+    public void setCodigoProducto(String codigoProducto) {
+        this.codigoProducto = codigoProducto;
+    }
+    
+    public String getCodigoRepartidor() {
+        return codigoRepartidor;
+    }
+
+    public void setCodigoRepartidor(String codigoRepartidor) {
+        this.codigoRepartidor = codigoRepartidor;
+    }
+    
+    private String generarCodigoPedido(){
+        idIncremental++;
+        return "PED" + idIncremental;
+    }
+    @Override
+    public String toString() {
+        return codigoPedido + "|" +
+               fecha + "|" +
+               codigoProducto + "|" +
+               cantidad + "|" +
+               valorPagado + "|" +
+               estado + "|" +
+               codigoRepartidor;
+    }   
 }
