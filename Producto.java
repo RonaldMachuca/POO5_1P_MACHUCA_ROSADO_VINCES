@@ -1,57 +1,100 @@
-package com.example;
+package com.funcionamiento;
 
-public class Producto{
-    //variables de instancia
+/**
+ * Representa un producto con su código, categoría, nombre, precio y stock disponible.
+ */
+public class Producto {
+    /** Código único del producto. */
     private String codigoProducto;
+
+    /** Categoría del producto. */
     private CategoriaProducto categoriaProducto;
+
+    /** Nombre del producto. */
     private String nombreProducto;
+
+    /** Precio unitario del producto. */
     private double precio;
+
+    /** Cantidad disponible en stock. */
     private int stock;
 
-    //constructor de Producto
-    public Producto(String codigoProducto,CategoriaProducto categoriaProducto, String nombreProducto,double precio,int stock){
-        this.codigoProducto=codigoProducto;
-        this.categoriaProducto=categoriaProducto;
-        this.nombreProducto=nombreProducto;
-        this.precio=precio;
-        this.stock=stock;
+    /**
+     * Constructor para crear un producto con sus atributos.
+     * 
+     * @param codigoProducto Código único del producto.
+     * @param categoriaProducto Categoría del producto.
+     * @param nombreProducto Nombre del producto.
+     * @param precio Precio unitario.
+     * @param stock Cantidad en stock.
+     */
+    public Producto(String codigoProducto, CategoriaProducto categoriaProducto, String nombreProducto, double precio, int stock) {
+        this.codigoProducto = codigoProducto;
+        this.categoriaProducto = categoriaProducto;
+        this.nombreProducto = nombreProducto;
+        this.precio = precio;
+        this.stock = stock;
     }
-    
 
-    //getters y setter
-    public String getCodigoProducto(){
+    // Getters y setters
+
+    /** @return Código único del producto. */
+    public String getCodigoProducto() {
         return codigoProducto;
     }
-    public CategoriaProducto getCategoriaProducto(){
+
+    /** @return Categoría del producto. */
+    public CategoriaProducto getCategoriaProducto() {
         return categoriaProducto;
     }
-    public String getNombreProducto(){
+
+    /** @return Nombre del producto. */
+    public String getNombreProducto() {
         return nombreProducto;
     }
-    public double getPrecio(){
+
+    /** @return Precio unitario del producto. */
+    public double getPrecio() {
         return precio;
     }
-    public int getStock(){
+
+    /** @return Cantidad disponible en stock. */
+    public int getStock() {
         return stock;
     }
-    public void setCodigoProducto(String codigoProducto){
-        this.codigoProducto=codigoProducto;
+
+    /** @param codigoProducto Código único del producto. */
+    public void setCodigoProducto(String codigoProducto) {
+        this.codigoProducto = codigoProducto;
     }
-    public void setCategoriaProducto(CategoriaProducto categoriaProducto){
-        this.categoriaProducto=categoriaProducto;
+
+    /** @param categoriaProducto Categoría del producto. */
+    public void setCategoriaProducto(CategoriaProducto categoriaProducto) {
+        this.categoriaProducto = categoriaProducto;
     }
-    public void setNombreProducto(String nombreProducto){
-        this.nombreProducto=nombreProducto;
+
+    /** @param nombreProducto Nombre del producto. */
+    public void setNombreProducto(String nombreProducto) {
+        this.nombreProducto = nombreProducto;
     }
-    public void setPrecio(double precio){
-        this.precio=precio;
+
+    /** @param precio Precio unitario del producto. */
+    public void setPrecio(double precio) {
+        this.precio = precio;
     }
-    public void setStock(int stock){
-        this.stock=stock;
+
+    /** @param stock Cantidad disponible en stock. */
+    public void setStock(int stock) {
+        this.stock = stock;
     }
-    //sobreescritura del metodo toString
+
+    /**
+     * Devuelve una representación del producto en formato de línea para archivos.
+     * 
+     * @return Cadena con atributos separados por '|'.
+     */
     @Override
-    public String toString(){
-        return getCodigoProducto()+"|"+getCategoriaProducto()+"|"+getNombreProducto()+"|"+getPrecio()+"|"+getStock();
+    public String toString() {
+        return getCodigoProducto() + "|" + getCategoriaProducto() + "|" + getNombreProducto() + "|" + getPrecio() + "|" + getStock();
     }
 }
