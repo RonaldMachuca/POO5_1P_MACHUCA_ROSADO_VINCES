@@ -1,5 +1,4 @@
 package com.funcionamiento;
-
 /**
  * Representa un producto con su código, categoría, nombre, precio y stock disponible.
  */
@@ -38,52 +37,92 @@ public class Producto {
 
     // Getters y setters
 
-    /** @return Código único del producto. */
+    /**
+     * Devuelve el código único del producto.
+     * 
+     * @return Código único del producto.
+     */
     public String getCodigoProducto() {
         return codigoProducto;
     }
 
-    /** @return Categoría del producto. */
+    /**
+     * Devuelve la categoría del producto.
+     * 
+     * @return Categoría del producto.
+     */
     public CategoriaProducto getCategoriaProducto() {
         return categoriaProducto;
     }
 
-    /** @return Nombre del producto. */
+    /**
+     * Devuelve el nombre del producto.
+     * 
+     * @return Nombre del producto.
+     */
     public String getNombreProducto() {
         return nombreProducto;
     }
 
-    /** @return Precio unitario del producto. */
+    /**
+     * Devuelve el precio unitario del producto.
+     * 
+     * @return Precio unitario del producto.
+     */
     public double getPrecio() {
         return precio;
     }
 
-    /** @return Cantidad disponible en stock. */
+    /**
+     * Devuelve la cantidad disponible en stock.
+     * 
+     * @return Cantidad disponible en stock.
+     */
     public int getStock() {
         return stock;
     }
 
-    /** @param codigoProducto Código único del producto. */
+    /**
+     * Establece el código único del producto.
+     * 
+     * @param codigoProducto Código único del producto.
+     */
     public void setCodigoProducto(String codigoProducto) {
         this.codigoProducto = codigoProducto;
     }
 
-    /** @param categoriaProducto Categoría del producto. */
+    /**
+     * Establece la categoría del producto.
+     * 
+     * @param categoriaProducto Categoría del producto.
+     */
     public void setCategoriaProducto(CategoriaProducto categoriaProducto) {
         this.categoriaProducto = categoriaProducto;
     }
 
-    /** @param nombreProducto Nombre del producto. */
+    /**
+     * Establece el nombre del producto.
+     * 
+     * @param nombreProducto Nombre del producto.
+     */
     public void setNombreProducto(String nombreProducto) {
         this.nombreProducto = nombreProducto;
     }
 
-    /** @param precio Precio unitario del producto. */
+    /**
+     * Establece el precio unitario del producto.
+     * 
+     * @param precio Precio unitario del producto.
+     */
     public void setPrecio(double precio) {
         this.precio = precio;
     }
 
-    /** @param stock Cantidad disponible en stock. */
+    /**
+     * Establece la cantidad disponible en stock.
+     * 
+     * @param stock Cantidad disponible en stock.
+     */
     public void setStock(int stock) {
         this.stock = stock;
     }
