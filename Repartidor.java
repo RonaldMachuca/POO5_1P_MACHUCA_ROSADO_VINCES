@@ -106,11 +106,6 @@ public class Repartidor extends Usuario {
         if (pedido == null) {
             System.out.println("Error: Pedido no encontrado o no ha sido asignado a este repartidor.");
         }
-
-        
-
-
-
         System.out.println("\nPedido encontrado:");
         System.out.println("Fecha del pedido: " + pedido.getFecha());
         System.out.println("Código del producto: " + pedido.getCodigoProducto());
@@ -151,12 +146,10 @@ public class Repartidor extends Usuario {
             System.out.println("\nError: El pedido ya fue entregado.");
             return;
         }
-
+        
         pedido.setEstadoProducto(nuevoEstado);
         System.out.println("\nEstado actualizado correctamente a " + formatoEstado(nuevoEstado));
-        Archivo.GuardarPedidos(pedidos);
-        //Archivo.EscribirArchivoPedidos(pedidos.toString());       
-        
+        Archivo.GuardarPedidos(pedidos);     
 
         if (nuevoEstado.equals(EstadoProducto.EN_RUTA)) {
             System.out.println("Notificación enviada al cliente: El pedido " + pedido.getCodigoPedido() + " ha sido despachado y está en camino.");
@@ -169,10 +162,6 @@ public class Repartidor extends Usuario {
                     sistema.notificarCambioEstado(c1, pedido);
                 }
             }
-            
-            
-            
-
         } else if (nuevoEstado.equals(EstadoProducto.ENTREGADO)) {
             System.out.println("Notificación enviada al cliente: El pedido " + pedido.getCodigoPedido() + " ha sido entregado con éxito.");
             for(Cliente c : clientes){
@@ -184,7 +173,6 @@ public class Repartidor extends Usuario {
                 }
             }
         }
-        //sc.close();
     }
 
 
@@ -215,7 +203,6 @@ public class Repartidor extends Usuario {
             System.out.println("------------------------");
             System.out.println("Total pedidos pendientes: " + contador);
         }
-        //sc.close();
     }
 
 
